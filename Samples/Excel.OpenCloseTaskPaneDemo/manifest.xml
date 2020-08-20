@@ -34,6 +34,9 @@
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
+          <!-- Function file is a HTML page that includes the JavaScript where 
+            functions for ExecuteAction will be called.
+            Think of the FunctionFile as the code behind ExecuteFunction. -->
           <FunctionFile resid="Commands.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <CustomTab id="ShareTime">
@@ -48,7 +51,9 @@
                 <Control xsi:type="Button" id="BtnOpenTaskpane">
                   <Label resid="BtnOpenTaskpane.Label"/>
                   <Supertip>
+                    <!-- ToolTip title. resid must point to a ShortString resource. -->
                     <Title resid="BtnOpenTaskpane.Label"/>
+                    <!-- ToolTip description. resid must point to a LongString resource. -->
                     <Description resid="BtnOpenTaskpane.Tooltip"/>
                   </Supertip>
                   <Icon>
@@ -56,10 +61,10 @@
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
-                  <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId1</TaskpaneId>
-                    <SourceLocation resid="Contoso.SharedRuntime.Url"/>
-                  </Action>
+                    <Action xsi:type="ShowTaskpane">
+                      <TaskpaneId>ButtonId1</TaskpaneId>
+                      <SourceLocation resid="Contoso.SharedRuntime.Url"/>
+                    </Action>
                 </Control>
                 <Control xsi:type="Button" id="BtnCloseTaskpane">
                     <Label resid="BtnCloseTaskpane.Label"/>
@@ -72,11 +77,11 @@
                       <bt:Image size="32" resid="Icon.32x32"/>
                       <bt:Image size="80" resid="Icon.80x80"/>
                     </Icon>
-                    <Action xsi:type="ShowTaskpane">
-                      <TaskpaneId>ButtonId1</TaskpaneId>
-                      <SourceLocation resid="Contoso.SharedRuntime.Url"/>
-                    </Action>
-                    <Enabled>false</Enabled>
+                    									<!-- This is what happens when the command is triggered (E.g. click on the Ribbon). Supported actions are ExecuteFunction or ShowTaskpane. -->
+									<Action xsi:type="ExecuteFunction">
+										<FunctionName>btnCloseTaskpane</FunctionName>
+									</Action>
+                  <Enabled>true</Enabled>
                 </Control>
               </Group>
               <Label resid="CommandsGroup.Label"/>

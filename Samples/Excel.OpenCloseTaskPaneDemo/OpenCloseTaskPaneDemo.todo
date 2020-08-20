@@ -1,5 +1,7 @@
 Todos:
-    ☐ Create Close Command
     ☐ Fix Debugging (see Office Repo Issue)
+       Failed to debug (again)
     https://github.com/OfficeDev/vscode-debugger-extension-for-office-addins
-    
+    ☐ Add Button State, keep track of TaskPane Open or Close status
+    ☐ Add Open Function to show the TaskPane
+    ☐ Add Close Function to close the TaskPane
