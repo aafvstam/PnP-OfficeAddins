@@ -80,7 +80,7 @@ export default class App extends React.Component {
       <div className="ms-welcome">
         <Header logo={logo} title={this.props.title} message="Welcome JavaScript" />
         <HeroList
-          message="Discover what Office .NET Core 3.1 Add-ins can do for you today!"
+          message="Discover what Office .NET 5 Add-ins can do for you today!"
           items={this.state.listItems}
         >
           <p className="ms-font-l">

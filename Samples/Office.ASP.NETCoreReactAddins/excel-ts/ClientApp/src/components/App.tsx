@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) Microsoft Corporation.
  * Licensed under the MIT license.
  */
@@ -87,9 +87,13 @@ export default class App extends React.Component<AppProps, AppState> {
 
     return (
       <div className="ms-welcome">
-        <Header logo={logo} title={this.props.title} message="Welcome TypeScript" />
+        <Header
+          logo={logo}
+          title={this.props.title}
+          message="Welcome TypeScript"
+        />
         <HeroList
-          message="Discover what Office .NET Core 3.1 Add-ins can do for you today!"
+          message="Discover what Office .NET 5 Add-ins can do for you today!"
           items={this.state.listItems}
         >
           <p className="ms-font-l">
